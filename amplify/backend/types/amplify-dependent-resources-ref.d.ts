@@ -1,8 +1,9 @@
 export type AmplifyDependentResourcesAttributes = {
   "auth": {
-    "awslexchatbot37b47add37b47add": {
+    "awslexchatbot8133e1998133e199": {
       "AppClientID": "string",
       "AppClientIDWeb": "string",
+      "CreatedSNSRole": "string",
       "IdentityPoolId": "string",
       "IdentityPoolName": "string",
       "UserPoolArn": "string",
@@ -11,7 +12,7 @@ export type AmplifyDependentResourcesAttributes = {
     }
   },
   "function": {
-    "awslexchatbot37b47add37b47addCustomMessage": {
+    "awslexchatbot8133e1998133e199CustomMessage": {
       "Arn": "string",
       "LambdaExecutionRole": "string",
       "LambdaExecutionRoleArn": "string",

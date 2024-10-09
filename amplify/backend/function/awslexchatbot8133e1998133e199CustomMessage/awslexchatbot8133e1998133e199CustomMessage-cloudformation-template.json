@@ -75,12 +75,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "awslexchatbot37b47add37b47addCustomMessage",
+            "awslexchatbot8133e1998133e199CustomMessage",
             {
               "Fn::Join": [
                 "",
                 [
-                  "awslexchatbot37b47add37b47addCustomMessage",
+                  "awslexchatbot8133e1998133e199CustomMessage",
                   "-",
                   {
                     "Ref": "env"
@@ -139,12 +139,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "awslexchatbot37b47add37b47addCustomMessage",
+            "awslexchatbot8133e1998133e199CustomMessage",
             {
               "Fn::Join": [
                 "",
                 [
-                  "awslexchatbot37b47add37b47addCustomMessage",
+                  "awslexchatbot8133e1998133e199CustomMessage",
                   "-",
                   {
                     "Ref": "env"

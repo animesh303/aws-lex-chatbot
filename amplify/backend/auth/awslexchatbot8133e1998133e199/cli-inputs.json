@@ -1,12 +1,12 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "awslexchatbot37b47add_identitypool_37b47add",
+    "identityPoolName": "awslexchatbot8133e199_identitypool_8133e199",
     "allowUnauthenticatedIdentities": true,
-    "resourceNameTruncated": "awslex37b47add",
-    "userPoolName": "awslexchatbot37b47add_userpool_37b47add",
+    "resourceNameTruncated": "awslex8133e199",
+    "userPoolName": "awslexchatbot8133e199_userpool_8133e199",
     "autoVerifiedAttributes": [
-      "email"
+      "phone_number"
     ],
     "mfaConfiguration": "OFF",
     "mfaTypes": [
@@ -31,10 +31,10 @@
     "userpoolClientReadAttributes": [
       "email"
     ],
-    "userpoolClientLambdaRole": "awslex37b47add_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "awslex8133e199_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "37b47add",
-    "resourceName": "awslexchatbot37b47add37b47add",
+    "sharedId": "8133e199",
+    "resourceName": "awslexchatbot8133e1998133e199",
     "authSelections": "identityPoolAndUserPool",
     "useDefault": "manual",
     "thirdPartyAuth": false,
@@ -51,7 +51,7 @@
     "hostedUI": false,
     "userPoolGroupList": [],
     "serviceName": "Cognito",
-    "verificationBucketName": "awslexchatbot37b47add37b47addverificationbucket",
+    "verificationBucketName": "awslexchatbot8133e1998133e199verificationbucket",
     "usernameCaseSensitive": false,
     "useEnabledMfas": true
   }

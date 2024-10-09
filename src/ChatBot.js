@@ -5,7 +5,7 @@ function ChatBot() {
   AWS.config.update({
     region: "us-east-1", // e.g., 'us-east-1'
     credentials: new AWS.CognitoIdentityCredentials({
-      IdentityPoolId: "us-east-1:2ba7c11e-a8f0-4b3e-a8cf-fb157963fa91",
+      IdentityPoolId: "us-east-1:809a7f66-17b6-49c3-b651-30a4bd97f465",
     }),
   });
   const [inputText, setInputText] = useState("");
@@ -41,8 +41,8 @@ function ChatBot() {
       //   };
 
       const params = {
-        botId: "DMD6BQTHBB", // Replace with your actual Bot ID
-        botAliasId: "TSTALIASID", // Replace with your actual Bot Alias ID
+        botId: "RRWYJQ4JUJ", // Replace with your actual Bot ID
+        botAliasId: "QXOHTRS4ON", // Replace with your actual Bot Alias ID
         localeId: "en_US", // Replace with your bot's locale
         sessionId: AWS.config.credentials.identityId,
         text: inputText,

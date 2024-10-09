@@ -1,6 +1,6 @@
 {
   "auth": {
-    "awslexchatbot37b47add37b47add": {
+    "awslexchatbot8133e1998133e199": {
       "customAuth": false,
       "dependsOn": [
         {
@@ -9,7 +9,7 @@
             "Name"
           ],
           "category": "function",
-          "resourceName": "awslexchatbot37b47add37b47addCustomMessage",
+          "resourceName": "awslexchatbot8133e1998133e199CustomMessage",
           "triggerProvider": "Cognito"
         }
       ],
@@ -30,7 +30,7 @@
           "EMAIL"
         ],
         "verificationMechanisms": [
-          "EMAIL"
+          "PHONE_NUMBER"
         ]
       },
       "providerPlugin": "awscloudformation",
@@ -38,7 +38,7 @@
     }
   },
   "function": {
-    "awslexchatbot37b47add37b47addCustomMessage": {
+    "awslexchatbot8133e1998133e199CustomMessage": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
@@ -52,43 +52,43 @@
     }
   },
   "parameters": {
-    "AMPLIFY_function_awslexchatbot37b47add37b47addCustomMessage_EMAILMESSAGE": {
+    "AMPLIFY_function_awslexchatbot8133e1998133e199CustomMessage_EMAILMESSAGE": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "awslexchatbot37b47add37b47addCustomMessage"
+          "resourceName": "awslexchatbot8133e1998133e199CustomMessage"
         }
       ]
     },
-    "AMPLIFY_function_awslexchatbot37b47add37b47addCustomMessage_EMAILSUBJECT": {
+    "AMPLIFY_function_awslexchatbot8133e1998133e199CustomMessage_EMAILSUBJECT": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "awslexchatbot37b47add37b47addCustomMessage"
+          "resourceName": "awslexchatbot8133e1998133e199CustomMessage"
         }
       ]
     },
-    "AMPLIFY_function_awslexchatbot37b47add37b47addCustomMessage_REDIRECTURL": {
+    "AMPLIFY_function_awslexchatbot8133e1998133e199CustomMessage_REDIRECTURL": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "awslexchatbot37b47add37b47addCustomMessage"
+          "resourceName": "awslexchatbot8133e1998133e199CustomMessage"
         }
       ]
     },
-    "AMPLIFY_function_awslexchatbot37b47add37b47addCustomMessage_deploymentBucketName": {
+    "AMPLIFY_function_awslexchatbot8133e1998133e199CustomMessage_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "awslexchatbot37b47add37b47addCustomMessage"
+          "resourceName": "awslexchatbot8133e1998133e199CustomMessage"
         }
       ]
     },
-    "AMPLIFY_function_awslexchatbot37b47add37b47addCustomMessage_s3Key": {
+    "AMPLIFY_function_awslexchatbot8133e1998133e199CustomMessage_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "awslexchatbot37b47add37b47addCustomMessage"
+          "resourceName": "awslexchatbot8133e1998133e199CustomMessage"
         }
       ]
     },
