@@ -204,25 +204,34 @@ This guide provides instructions for deploying the AWS Amplify application and i
    botAliasId: "TSTALIASID", // Replace with your actual Bot Alias ID
    ```
 
-9. Deploy the application:
+9. Add Lex access to the unauthenticated (guest) role:
+   Make the script executable and run it:
+
    ```bash
-   $ amplify publish
-
-   ✔ Successfully pulled backend environment dev from the cloud.
-   ? Do you still want to publish the frontend? Yes
-   Publish started for amplifyhosting
-
-   Creating an optimized production build...
-   Compiled successfully.
-
-   File sizes after gzip:
-
-   The project was built assuming it is hosted at /.
-   You can control this with the homepage field in your package.json.
-   ✔ Zipping artifacts completed.
-   ✔ Deployment complete!
-   https://dev.dpy922bvgnzv9.amplifyapp.com
+   chmod +x add_lex_access_to_guest.sh
+   ./add_lex_access_to_guest.sh
    ```
+   This script will attach the AmazonLexFullAccess policy to the unauthenticated role associated with your Cognito Identity Pool, allowing guest users to interact with your Lex bot.
+
+10. Deploy the application:
+    ```bash
+    $ amplify publish
+
+    ✔ Successfully pulled backend environment dev from the cloud.
+    ? Do you still want to publish the frontend? Yes
+    Publish started for amplifyhosting
+
+    Creating an optimized production build...
+    Compiled successfully.
+
+    File sizes after gzip:
+
+    The project was built assuming it is hosted at /.
+    You can control this with the homepage field in your package.json.
+    ✔ Zipping artifacts completed.
+    ✔ Deployment complete!
+    https://dev.dpy922bvgnzv9.amplifyapp.com
+    ```
 
 ## Additional Notes
 

@@ -172,9 +172,14 @@ fi
 if [ -z "$BOT_ALIAS_ID" ]; then
     echo "Creating a bot alias..."
     BOT_ALIAS_ID=$(aws lexv2-models create-bot-alias \
-      --bot-alias-name "PROD" \
+      --bot-alias-name "PROD1" \
       --bot-id "$BOT_ID" \
       --bot-version "$BOT_VERSION" \
+      --bot-alias-locale-settings '{
+        "en_US": {
+          "enabled": true
+        }
+      }' \
       --query 'botAliasId' --output text) || handle_error "create-bot-alias"
     save_variable "BOT_ALIAS_ID" "$BOT_ALIAS_ID"
 fi

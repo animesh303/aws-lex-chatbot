@@ -41,9 +41,9 @@ function ChatBot() {
       //   };
 
       const params = {
-        botId: "RRWYJQ4JUJ", // Replace with your actual Bot ID
-        botAliasId: "QXOHTRS4ON", // Replace with your actual Bot Alias ID
-        localeId: "en_US", // Replace with your bot's locale
+        botId: "HJA3PMZYLR", // Replace with your actual Bot ID
+        botAliasId: "ZZMEXHWZEJ", // Replace with your actual Bot Alias ID
+        localeId: "en_US", // This should match the locale created in the script
         sessionId: AWS.config.credentials.identityId,
         text: inputText,
       };
