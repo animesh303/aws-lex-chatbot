@@ -1,0 +1,36 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-awslexchatbot-dev-9f5c9-authRole",
+      "UnauthRoleArn": "arn:aws:iam::637423177516:role/amplify-awslexchatbot-dev-9f5c9-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::637423177516:role/amplify-awslexchatbot-dev-9f5c9-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-awslexchatbot-dev-9f5c9-deployment",
+      "UnauthRoleName": "amplify-awslexchatbot-dev-9f5c9-unauthRole",
+      "StackName": "amplify-awslexchatbot-dev-9f5c9",
+      "StackId": "arn:aws:cloudformation:us-east-1:637423177516:stack/amplify-awslexchatbot-dev-9f5c9/56009820-8606-11ef-a7b7-0affde96e0ab",
+      "AmplifyAppId": "d30ycr5qb3e8i2",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-awslexchatbot-dev-9f5c9-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "awslexchatbot37b47add37b47add": {}
+      },
+      "function": {
+        "awslexchatbot37b47add37b47addCustomMessage": {
+          "REDIRECTURL": "",
+          "EMAILSUBJECT": "",
+          "EMAILMESSAGE": "",
+          "deploymentBucketName": "amplify-awslexchatbot-dev-9f5c9-deployment",
+          "s3Key": "amplify-builds/awslexchatbot37b47add37b47addCustomMessage-45637a3141415641425a-build.zip"
+        }
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d30ycr5qb3e8i2",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}
