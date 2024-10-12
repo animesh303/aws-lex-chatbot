@@ -1,33 +1,23 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-awslexchatbot-dev-5d13d-authRole",
-      "UnauthRoleArn": "arn:aws:iam::891377368990:role/amplify-awslexchatbot-dev-5d13d-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::891377368990:role/amplify-awslexchatbot-dev-5d13d-authRole",
+      "AuthRoleName": "amplify-awslexchatbot-dev-c4837-authRole",
+      "UnauthRoleArn": "arn:aws:iam::730335195555:role/amplify-awslexchatbot-dev-c4837-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::730335195555:role/amplify-awslexchatbot-dev-c4837-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-awslexchatbot-dev-5d13d-deployment",
-      "UnauthRoleName": "amplify-awslexchatbot-dev-5d13d-unauthRole",
-      "StackName": "amplify-awslexchatbot-dev-5d13d",
-      "StackId": "arn:aws:cloudformation:us-east-1:891377368990:stack/amplify-awslexchatbot-dev-5d13d/8072eed0-867b-11ef-ae6a-12119db45683",
-      "AmplifyAppId": "dpy922bvgnzv9",
-      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-awslexchatbot-dev-5d13d-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+      "DeploymentBucketName": "amplify-awslexchatbot-dev-c4837-deployment",
+      "UnauthRoleName": "amplify-awslexchatbot-dev-c4837-unauthRole",
+      "StackName": "amplify-awslexchatbot-dev-c4837",
+      "StackId": "arn:aws:cloudformation:us-east-1:730335195555:stack/amplify-awslexchatbot-dev-c4837/1637e370-8899-11ef-83cf-0affd0b1aaab",
+      "AmplifyAppId": "d3fe4qr4f1lbt4"
     },
     "categories": {
       "auth": {
-        "awslexchatbot8133e1998133e199": {}
-      },
-      "function": {
-        "awslexchatbot8133e1998133e199CustomMessage": {
-          "REDIRECTURL": "",
-          "EMAILSUBJECT": "",
-          "EMAILMESSAGE": "",
-          "deploymentBucketName": "amplify-awslexchatbot-dev-5d13d-deployment",
-          "s3Key": "amplify-builds/awslexchatbot8133e1998133e199CustomMessage-312b61694d716a524564-build.zip"
-        }
+        "awslexchatbot9974b33b9974b33b": {}
       },
       "hosting": {
         "amplifyhosting": {
-          "appId": "dpy922bvgnzv9",
+          "appId": "d3fe4qr4f1lbt4",
           "type": "manual"
         }
       }

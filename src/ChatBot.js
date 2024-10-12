@@ -3,9 +3,9 @@ import AWS from "aws-sdk";
 
 function ChatBot() {
   AWS.config.update({
-    region: "us-east-1", // e.g., 'us-east-1'
+    region: "REGION_PLACEHOLDER", // e.g., 'us-east-1'
     credentials: new AWS.CognitoIdentityCredentials({
-      IdentityPoolId: "us-east-1:809a7f66-17b6-49c3-b651-30a4bd97f465",
+      IdentityPoolId: "IDENTITY_POOL_ID_PLACEHOLDER",
     }),
   });
   const [inputText, setInputText] = useState("");
@@ -41,8 +41,8 @@ function ChatBot() {
       //   };
 
       const params = {
-        botId: "HJA3PMZYLR", // Replace with your actual Bot ID
-        botAliasId: "ZZMEXHWZEJ", // Replace with your actual Bot Alias ID
+        botId: "BOT_ID_PLACEHOLDER", // Replace with your actual Bot ID
+        botAliasId: "BOT_ALIAS_ID_PLACEHOLDER", // Replace with your actual Bot Alias ID
         localeId: "en_US", // This should match the locale created in the script
         sessionId: AWS.config.credentials.identityId,
         text: inputText,

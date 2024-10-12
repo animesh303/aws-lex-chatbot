@@ -1,18 +1,8 @@
 {
   "auth": {
-    "awslexchatbot8133e1998133e199": {
+    "awslexchatbot9974b33b9974b33b": {
       "customAuth": false,
-      "dependsOn": [
-        {
-          "attributes": [
-            "Arn",
-            "Name"
-          ],
-          "category": "function",
-          "resourceName": "awslexchatbot8133e1998133e199CustomMessage",
-          "triggerProvider": "Cognito"
-        }
-      ],
+      "dependsOn": [],
       "frontendAuthConfig": {
         "mfaConfiguration": "OFF",
         "mfaTypes": [
@@ -37,13 +27,6 @@
       "service": "Cognito"
     }
   },
-  "function": {
-    "awslexchatbot8133e1998133e199CustomMessage": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    }
-  },
   "hosting": {
     "amplifyhosting": {
       "providerPlugin": "awscloudformation",
@@ -52,46 +35,6 @@
     }
   },
   "parameters": {
-    "AMPLIFY_function_awslexchatbot8133e1998133e199CustomMessage_EMAILMESSAGE": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "awslexchatbot8133e1998133e199CustomMessage"
-        }
-      ]
-    },
-    "AMPLIFY_function_awslexchatbot8133e1998133e199CustomMessage_EMAILSUBJECT": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "awslexchatbot8133e1998133e199CustomMessage"
-        }
-      ]
-    },
-    "AMPLIFY_function_awslexchatbot8133e1998133e199CustomMessage_REDIRECTURL": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "awslexchatbot8133e1998133e199CustomMessage"
-        }
-      ]
-    },
-    "AMPLIFY_function_awslexchatbot8133e1998133e199CustomMessage_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "awslexchatbot8133e1998133e199CustomMessage"
-        }
-      ]
-    },
-    "AMPLIFY_function_awslexchatbot8133e1998133e199CustomMessage_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "awslexchatbot8133e1998133e199CustomMessage"
-        }
-      ]
-    },
     "AMPLIFY_hosting_amplifyhosting_appId": {
       "usedBy": [
         {
