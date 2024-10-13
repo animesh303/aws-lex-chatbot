@@ -1,76 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grandstander:wght@300;400;500;700&display=swap");
+
+:root {
+  --light-bg: #f0f0f0;
+  --light-chat-bg: #ffffff;
+  --light-text: #333333;
+  --light-input-bg: #f8f8f8;
+  --light-bot-message: #f1f0f0;
+  --light-user-message: #007bff;
+  --light-header: #007bff;
+  --font-primary: "Grandstander", cursive;
+  --dark-bg: #1a1a1a;
+  --dark-chat-bg: #2c2c2c;
+  --dark-text: #ffffff;
+  --dark-input-bg: #3a3a3a;
+  --dark-bot-message: #4a4a4a;
+  --dark-user-message: #0056b3;
+  --dark-header: #0056b3;
+}
+
+body {
+  font-family: var(--font-primary);
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  font-family: "Roboto", Arial, sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.App.light {
+  background-color: var(--light-bg);
+  color: var(--light-text);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
 }
 
 .chatbot {
-  max-width: 600px;
+  max-width: 400px;
+  width: 100%;
   margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-out;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: var(--font-primary);
+}
+
+.chatbot.light {
+  background-color: var(--light-chat-bg);
+}
+
+.chatbot.dark {
+  background-color: var(--dark-chat-bg);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chat-header {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.light .chat-header {
+  background-color: var(--light-header);
+  color: #ffffff;
+}
+
+.dark .chat-header {
+  background-color: var(--dark-header);
+  color: #ffffff;
+}
+
+.chat-header h2 {
+  margin: 0;
+  margin-left: 15px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.chat-header .bot-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
 }
 
 .chat-window {
-  border: 1px solid #ccc;
   height: 400px;
-  overflow-y: scroll;
-  padding: 10px;
+  overflow-y: auto;
+  padding: 20px;
 }
 
 .message {
-  margin: 10px 0;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  animation: messageIn 0.3s ease-out;
+}
+
+@keyframes messageIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .message.user {
-  text-align: right;
+  flex-direction: row-reverse;
 }
 
-.message.bot {
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.message-content-wrapper {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-content {
+  padding: 8px 12px;
+  border-radius: 18px;
+  font-size: 16px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  max-width: 80%;
+}
+
+/* Target Markdown content */
+.message-content > p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure consistent styling for bot messages, including the greeting */
+.message.bot .message-content {
+  background-color: var(--light-bot-message);
+  color: var(--light-text);
   text-align: left;
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+/* Ensure consistent styling for user messages */
+.message.user .message-content {
+  background-color: var(--light-user-message);
+  color: #ffffff;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+/* Additional styles to ensure consistency */
+.message-content > *:first-child {
+  margin-top: 0;
+}
+
+.message-content > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Adjust styles for dark theme if necessary */
+.dark .message.bot .message-content {
+  background-color: var(--dark-bot-message);
+  color: var(--dark-text);
+}
+
+.dark .message.user .message-content {
+  background-color: var(--dark-user-message);
+}
+
+.message-timestamp {
+  font-size: 11px;
+  color: #888;
+  margin-top: 2px;
+  padding: 0 12px;
+}
+
+.message.bot .message-timestamp {
+  text-align: left;
+  margin-left: 10px;
+}
+
+.message.user .message-timestamp {
+  text-align: right;
+  margin-right: 10px;
 }
 
 .input-form {
   display: flex;
-  margin-top: 10px;
+  padding: 15px;
+  transition: background-color 0.3s;
+}
+
+.light .input-form {
+  background-color: var(--light-input-bg);
+}
+
+.dark .input-form {
+  background-color: var(--dark-input-bg);
 }
 
 .input-form input {
   flex: 1;
-  padding: 10px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+  font-family: var(--font-primary);
+}
+
+.light .input-form input {
+  background-color: var(--light-chat-bg);
+  color: var(--light-text);
+}
+
+.dark .input-form input {
+  background-color: var(--dark-chat-bg);
+  color: var(--dark-text);
+  border-color: #444;
+}
+
+.input-form input:focus {
+  border-color: var(--light-user-message);
 }
 
 .input-form button {
+  background-color: var(--light-user-message);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.input-form button:hover {
+  background-color: var(--dark-user-message);
+}
+
+.input-form button:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: inherit;
+}
+
+.quick-replies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 10px;
 }
+
+.quick-replies button {
+  margin: 5px;
+  padding: 8px 16px;
+  background-color: var(--light-user-message);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: var(--font-primary);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.quick-replies button:hover {
+  background-color: var(--dark-user-message);
+}
+
+.dark .quick-replies button {
+  background-color: var(--dark-user-message);
+}
+
+.dark .quick-replies button:hover {
+  background-color: var(--light-user-message);
+}
+
+/* Remove or comment out the following CSS rules if they exist */
+
+/*
+.message.user.typing {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.message-content.typing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #999;
+  border-radius: 50%;
+  margin: 0 2px;
+  animation: typing 1s infinite ease-in-out;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+*/
+
+/* Keep other existing styles */
